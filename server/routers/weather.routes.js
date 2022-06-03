@@ -13,12 +13,4 @@ router.get("/:city", async (req,resp)=>{
     resp.send(data);
 })
 
-router.get("/:lat/:lon", async (req,resp)=>{
-    const lat = req.params.lat
-    const lon = req.params.lon
-    const response = await fetch(`${URL}lat=${lat}&lon=${lon}&appid=${API_KEY}`);
-    const data = await response.json();
-    resp.send(data);
-})
-
 export default router
