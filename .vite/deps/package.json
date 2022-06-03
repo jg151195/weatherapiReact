@@ -1,1 +1,6 @@
-{"type":"module"}
+{
+    "type":"module",
+    "client": "cd client && npx vite",
+    "backend": "cd server && nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npx vite\""
+}
